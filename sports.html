@@ -1,0 +1,30 @@
+---
+layout: page
+title: sports
+permalink: /sports/
+---
+<div class="intro">
+	<p>The first sport I loved was baseball, but I closely follow basketball and football as well! 
+	Go Cleveland!!</p>
+	<p>Resources I use:
+		<ul>
+			<li><a href="https://www.espn.com" target="_blank">ESPN</a></li>
+			<li><a href="https://fivethirtyeight.com" target="_blank">fivethirtyeight</a></li>
+			<li><a href="https://www.fangraphs.com" target="_blank">Fangraphs</a></li>
+		</ul>
+	</p>
+</div>
+<hr>
+<br>
+<br>
+
+<ul>
+ 	{% for post in site.categories.sports %}
+ 		<li>
+ 				<p> {{ post.date | date: '%B %d, %Y' }}
+ 				<br>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				</p>
+		</li>
+	{% endfor %}
+</ul>

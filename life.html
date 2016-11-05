@@ -1,0 +1,22 @@
+---
+layout: page
+title: life
+permalink: /life/
+---
+<div class="intro">
+	<p>I just wanted this section to be my musings about people and relationships and so forth!</p>
+</div>
+<hr>
+<br>
+<br>
+
+<ul>
+ 	{% for post in site.categories.life %}
+ 		<li>
+ 			<p> {{ post.date | date: '%B %d, %Y' }}
+ 			<br>
+ 			<a href="{{ post.url }}">{{ post.title }}</a>
+ 			</p>
+		</li>
+	{% endfor %}
+</ul>

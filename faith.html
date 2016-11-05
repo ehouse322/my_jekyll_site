@@ -1,0 +1,29 @@
+---
+layout: page
+title: faith
+permalink: /faith/
+---
+<div class="intro">
+	<p>I am a Christian, reformed in my convictions; I enjoy studying theology!</p>
+	<p>Resources I use:
+		<ul>
+			<li><a href="https://www.desiringGod.org" target="_blank">Desiring God</a></li>
+			<li><a href="//www.challies.com" target="_blank">Challies</a></li>
+			<li><a href="https://thegospelcoalition.org" target="_blank">The Gospel Coalition</a></li>
+		</ul>
+	</p>
+</div>
+<hr>
+<br>
+<br>
+
+<ul>
+ 	{% for post in site.categories.faith %}
+ 		<li>
+ 			<p> {{ post.date | date: '%B %d, %Y' }}
+ 			<br>
+ 			<a href="{{ post.url }}">{{ post.title }}</a>
+ 			</p>
+		</li>
+	{% endfor %}
+</ul>

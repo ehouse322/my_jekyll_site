@@ -1,0 +1,27 @@
+---
+layout: page
+title: coding
+permalink: /coding/
+---
+<div class="intro">
+	<p>I am a self-taught coder, and these are my thoughts on coding, and my projects!</p>
+	<p>Resources I use: 
+		<ul>
+			<li><a href="https://www.udacity.com/" target="_blank">Udacity</a></li>
+			<li><a href="https://www.codeacademy.com" target ="_blank">Code Academy</a></li>
+	</p>
+</div>
+<hr> 
+<br>
+<br>
+
+<ul>
+ 	{% for post in site.categories.coding %}
+ 		<li>
+ 			<p> {{ post.date | date: '%B %d, %Y' }}
+ 			<br>
+ 			<a href="{{ post.url }}">{{ post.title }}</a>
+ 			</p>
+		</li>
+	{% endfor %}
+</ul>
