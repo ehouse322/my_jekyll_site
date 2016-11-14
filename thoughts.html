@@ -7,14 +7,16 @@ These are thoughts I have that I want to remember or write about later!
 <br>
 <br>
 <hr>
+<br>
+<br>
 {% assign sorted = (site.thoughts | sort: 'date') | reverse %}
-{% for thought in site.thoughts %}
-	<div class="thought">
-		<!-- <em> {{thought.date}} </em> -->
-		<!-- use the above line to test if files are actually sorted by date. -->
-		<em> {{thought.title}} </em>
-		{{ thought.content }}
-		<hr>
-		<br>
-	</div>
-{% endfor %}
+	{% for thought in site.thoughts %}
+		<div class="thought">
+			<!-- <em> {{thought.date}} </em> -->
+			<!-- use the above line to test if files are actually sorted by date. -->
+			<em> {{thought.title}} </em>
+			{{ thought.content }}
+			<hr>
+			<br>
+		</div>
+	{% endfor %}
